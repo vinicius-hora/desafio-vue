@@ -1,20 +1,20 @@
 
 <template>
 
-    <v-app>
+    <v-app id="appVinicius">
 
     <v-main>
         <v-container >
             <div class="blue lighten-4" id="div-total" >
                 <v-row >
-                    <v-col cols="6">
+                    <v-col cols="6" style="text-align: center;">
                           <h1> <b> DADOS DO BRASIL: </b> </h1>
                             <br>
                             <br>
                             <br>
                             <br>
                             <v-row >
-                                 <v-col cols="12">
+                                 <v-col cols="12" style="text-align: center;">
                                      <b><b >Total de casos: {{casos}}</b></b>
                                      <br>
                                      <b >Total de mortes: {{mortes}}</b>
@@ -23,10 +23,10 @@
                                  </v-col>
                             </v-row>    
                     </v-col>
-                    <v-col cols="6" >
+                    <v-col cols="6" style="text-align: center;" >
                         <v-btn @click="totalPais" color="primary" dark> Pesquisar pais</v-btn>
                         <v-row >
-                            <v-col cols="4" offset-md=4>
+                            <v-col cols="4" offset-md=4 style="text-align: center;">
                                 <v-text-field  
                                    
                                    
@@ -52,7 +52,7 @@
                 <v-spacer></v-spacer>
             </div>
           
-            <div id="div-estado" class="dark">
+            <div id="div-estado" class="dark" style="text-align: center;" >
                 <v-btn @click="casosPorEstado" dark >Mostrar dados por estado</v-btn>
                 <v-simple-table dark>
                     <template v-slot:default>
@@ -211,6 +211,10 @@ export default ({
     }
     .p{
         align-items: center;
+    }
+    #appVinicius{
+        background-color: #BDBDBD;
+        
     }
 
 </style>
